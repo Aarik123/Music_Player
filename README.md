@@ -1,25 +1,25 @@
-# Minimal MP3 Player using XIAO ESP32-C6
 
-This project is a lightweight MP3 player built around the Seeed Studio XIAO ESP32-C6. Audio is played through PWM and filtered using a passive RC low-pass circuit to drive a stereo AUX output. The interface uses three GPIO-connected buttons for playback control.
+# MP3 Player Hardware – XIAO ESP32-C6
 
-## Features
-- MP3 audio playback using PWM output
-- Three-button interface: play/pause, next, previous
-- RC low-pass filter for analog output
-- Stereo AUX output via GPIO 22 (Left) and GPIO 23 (Right)
-- Powered by a 3.7V LiPo pouch cell
-- Minimal hardware and low power usage
+This branch contains the open-source hardware design for a compact MP3 player built around the Seeed Studio XIAO ESP32-C6. It includes schematic-level details suitable for perfboard or custom PCB implementation.
 
-## Hardware
-- XIAO ESP32-C6 microcontroller
-- MicroSD card reader (SPI interface)
-- Three tactile pushbuttons (GPIO 0, 1, 2)
-- RC filter (resistor + ceramic capacitor)
-- Stereo 3.5mm TRRS jack
-- 3.7V LiPo battery
-- Solid-core wire for connections
+## Hardware Overview
+- Microcontroller: XIAO ESP32-C6
+ Audio Output:
+   PWM-based
+   RC low-pass filter with ceramic capacitor and resistor
+   3.5 mm AUX jack (GND to sleeve)
+   
+- Buttons: 3x tactile push buttons (GPIO 0, 1, 2)
+ 
+-Display: 0.96″ I²C OLED (SDA: GPIO 22, SCL: GPIO 23)
+
+ - SD Card: SPI interface (MOSI: GPIO 7, MISO: GPIO 8, CLK: GPIO 9, CS: GPIO 10)
+ - Power: 3.7 V LiPo pouch cell
 
 ## License
 
-This project is licensed under the MIT License.  
-You are free to use, modify, and distribute the work, provided that original credit is given to Aarik D’souza.
+Licensed under the [MIT License](https://opensource.org/licenses/MIT)
+
+> Based on MP3 Player Hardware by Aarik D'souza (2025)
+> Please include attribution in any derivative hardware designs.

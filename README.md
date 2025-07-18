@@ -5,17 +5,22 @@ This branch contains the open-source hardware design for a compact MP3 player bu
 
 ## Hardware Overview
 - Microcontroller: XIAO ESP32-C6
- Audio Output:
+-  Audio Output:
    PWM-based
    RC low-pass filter with ceramic capacitor and resistor
    3.5 mm AUX jack (GND to sleeve)
    
-- Buttons: 3x tactile push buttons (GPIO 0, 1, 2)
- 
--Display: 0.96″ I²C OLED (SDA: GPIO 22, SCL: GPIO 23)
+-  Buttons:
+   3x tactile push buttons (GPIO 0, 1, 2)
+   
+  - Display:
+    0.96″ I²C OLED (SDA: GPIO 22, SCL: GPIO 23)
 
- - SD Card: SPI interface (MOSI: GPIO 7, MISO: GPIO 8, CLK: GPIO 9, CS: GPIO 10)
- - Power: 3.7 V LiPo pouch cell
+ - SD Card:
+ SPI interface (MOSI: GPIO 7, MISO: GPIO 8, CLK: GPIO 9, CS: GPIO 10)
+    
+- Power:
+   3.7 V LiPo pouch cell
 
 ## License
 
